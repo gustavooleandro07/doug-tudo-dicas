@@ -1978,3 +1978,22 @@ h1, h2, h3, p {
         border-radius: 16px !important;
     }
 }
+/* ========================================
+   AJUSTE DE PREENCHIMENTO DA FOTO NO CELULAR
+======================================== */
+
+@media (max-width: 800px) {
+    .foto-inicio {
+        width: 100% !important;
+        padding: 0 15px !important; /* Dá uma margem segura nas pontas da tela */
+        box-sizing: border-box !important;
+    }
+
+    .foto-inicio img {
+        width: 100% !important;
+        max-width: 100% !important; /* Faz a foto ocupar toda a largura disponível */
+        height: 360px !important;    /* Define uma altura fixa proporcional para o celular */
+        object-fit: cover !important;  /* Estica e preenche o espaço sem deixar sobras nas laterais */
+        border-radius: 16px !important;
+    }
+}
