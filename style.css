@@ -1997,3 +1997,23 @@ h1, h2, h3, p {
         border-radius: 16px !important;
     }
 }
+/* ========================================
+   AJUSTE FINAL DA FOTO NO CELULAR
+======================================== */
+
+@media (max-width: 800px) {
+    .foto-inicio {
+        width: 100% !important;
+        padding: 0 10px !important;
+        box-sizing: border-box !important;
+    }
+
+    .foto-inicio img {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        max-height: 420px !important;
+        object-fit: contain !important; /* Mostra a imagem inteira sem cortar nenhuma borda */
+        border-radius: 16px !important;
+    }
+}
