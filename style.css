@@ -1834,3 +1834,147 @@ h1, h2, h3, p {
     position: relative;
     z-index: 2;
 }
+/* ========================================
+   CORREÇÃO DO TOPO PARA CELULAR (RESPONSIVO)
+======================================== */
+
+@media (max-width: 800px) {
+    .inicio {
+        flex-direction: column !important; /* Joga o texto em cima e a foto embaixo */
+        align-items: center !important;
+        text-align: center !important;
+        padding: 50px 6% !important;
+        gap: 35px !important;
+    }
+
+    .inicio-texto {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .inicio-texto p {
+        margin-left: auto;
+        margin-right: auto; /* Centraliza os parágrafos no celular */
+    }
+
+    .inicio .botao3 {
+        margin-left: auto;
+        margin-right: auto; /* Centraliza o botão principal */
+    }
+
+    .foto-inicio {
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
+    }
+
+    .foto-inicio img {
+        width: 100% !important;
+        max-width: 320px !important; /* Tamanho ideal para caber na tela do celular */
+        height: auto !important;
+        aspect-ratio: 4 / 5 !important;
+    }
+}
+/* ========================================
+   CORREÇÃO DE PÁGINAS DE PRODUTOS NO CELULAR
+======================================== */
+
+@media (max-width: 600px) {
+    /* Ajusta o espaçamento do topo da página do produto */
+    .detalhe-hero {
+        padding: 30px 5% !important;
+        gap: 25px !important;
+        text-align: center !important;
+    }
+
+    .detalhe-texto {
+        max-width: 100% !important;
+    }
+
+    .detalhe-texto h2 {
+        font-size: 28px !important;
+        line-height: 1.3 !important;
+    }
+
+    /* Centraliza e dá respiro para o botão de compra no celular */
+    .botao-detalhe, .botao-comprar {
+        display: inline-flex !important;
+        width: 100% !important;
+        max-width: 320px !important;
+        margin: 20px auto 0 auto !important;
+        text-align: center !important;
+    }
+
+    /* Centraliza a capa do e-book */
+    .detalhe-capa {
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
+    }
+
+    .detalhe-capa img {
+        max-width: 260px !important;
+        height: auto !important;
+    }
+}
+/* ========================================
+   CORREÇÃO DEFINITIVA DO TOPO NO CELULAR
+======================================== */
+
+@media (max-width: 800px) {
+    /* Ajusta o cabeçalho para não apertar os links */
+    header {
+        flex-direction: column !important;
+        gap: 12px !important;
+        padding: 15px 5% !important;
+    }
+
+    header nav {
+        gap: 15px !important;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* Força o topo a empilhar certinho: texto em cima, foto inteira embaixo */
+    .inicio {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        padding: 40px 5% !important;
+        gap: 30px !important;
+    }
+
+    .inicio-texto {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .inicio-texto p, 
+    .inicio-texto h1, 
+    .inicio-texto h2 {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Centraliza o botão principal de produtos */
+    .inicio .botao3 {
+        margin: 20px auto 0 auto !important;
+        display: inline-flex !important;
+    }
+
+    /* Garante que a foto apareça inteira, centralizada e sem cortes na lateral */
+    .foto-inicio {
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
+        margin-top: 10px;
+    }
+
+    .foto-inicio img {
+        width: 100% !important;
+        max-width: 290px !important; /* Tamanho perfeito para telas menores */
+        height: auto !important;
+        object-fit: contain !important; /* Evita que a imagem seja cortada nas bordas */
+        border-radius: 16px !important;
+    }
+}
